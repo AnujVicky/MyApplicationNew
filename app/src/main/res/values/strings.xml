@@ -18,15 +18,4 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="profile">"Profile"</string>
-    <string name="contactus">"Contract Us"</string>
-    <string name="logout">"Logout"</string>
-    <string name="twitterUsername">\anujvicky801@gmail.com</string>
-
-    <string name="openNavDrawer">Navigation Drawer Open</string>
-    <string name="closeNavDrawer">Navigation Drawer Close</string>
-    <string name="mahuadanr">MAHUADANR</string>
-    <string name="_9939009920">9939009920</string>
-    <string name="phone">Phone</string>
-    <string name="alternate_phone">Alternate phone</string>
 </resources>
