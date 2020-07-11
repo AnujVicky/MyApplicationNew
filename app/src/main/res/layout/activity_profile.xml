@@ -11,40 +11,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/grad"
-        android:paddingBottom="20dp">
+        android:paddingBottom="30dp">
 
-        <RelativeLayout
-            android:id="@+id/imgUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/imgUser"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:background="@drawable/circle_border">-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/circle_border">
+            android:layout_marginTop="26dp"
+            android:src="@drawable/userimg" />
+        <!--            <ImageView-->
+        <!--                droid:layout_height="120dp"-->
+        <!--                android:layout_margin="9dp"-->
+        <!--                android:adjustViewBounds="true"-->
+        <!--                android:back android:layout_width="120dp"-->
+        <!--                anground="@drawable/circle"-->
+        <!--                android:padding="3dp"-->
+        <!--                android:scaleType="centerInside"-->
+        <!--                android:src="@drawable/userimg" />-->
 
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="9dp"
-                android:adjustViewBounds="true"
-                android:background="@drawable/circle"
-                android:padding="3dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/userimg" />
+        <!--        </RelativeLayout>-->
 
-        </RelativeLayout>
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imgUser"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15sp"
+            android:layout_below="@+id/profile_image"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="114dp"
+            android:layout_marginLeft="112dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginRight="102dp"
             android:fontFamily="sans-serif-light"
-            android:text="Joey Tribbiani"
+            android:text="Anuj Kumar"
             android:textColor="@color/white"
             android:textSize="32sp" />
-
 
         <TextView
             android:id="@+id/tv_address"
@@ -53,7 +67,7 @@
             android:layout_below="@+id/tv_name"
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif"
-            android:text="new york, usa"
+            android:text="Mahuadanr"
             android:textAllCaps="true"
             android:textColor="@color/address"
             android:textSize="14sp" />
@@ -62,8 +76,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:src="@drawable/ic_setting" />
@@ -97,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="453K"
+                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -105,7 +119,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="followers"
+                    android:text="Ordered"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
@@ -134,7 +148,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="873"
+                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="25sp" />
 
@@ -142,7 +156,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="following"
+                    android:text="current Order"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
@@ -176,7 +190,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email"
+                    android:text="Name"
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
@@ -184,7 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="joey@sharenofood.com"
+                    android:text="Anuj Kumar"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -213,7 +227,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="+1-202-555-0157"
+                    android:text="9939009920"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -234,7 +248,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Twitter"
+                    android:text="Email"
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
