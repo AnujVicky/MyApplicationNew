@@ -24,26 +24,26 @@
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="match_parent"
-            android:layout_height="53dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/profile_image"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginStart="114dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginRight="102dp"
             android:ellipsize="marquee"
             android:fontFamily="sans-serif-light"
-            android:paddingStart="20dp"
             android:paddingLeft="20dp"
-            android:gravity="center"
             android:singleLine="true"
+            android:text="Anuj Kumar"
             android:textColor="@color/white"
-            android:textSize="32sp" />
+            android:textSize="32sp"
+            android:paddingStart="20dp" />
 
         <TextView
             android:id="@+id/tv_address"
@@ -176,13 +176,13 @@
                     android:id="@+id/editname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autofillHints=""
                     android:ems="10"
                     android:fontFamily="sans-serif-light"
-
                     android:inputType="textPersonName"
+
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:autofillHints="" />
 
                 <View
                     android:layout_width="match_parent"
@@ -205,14 +205,11 @@
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/edit_phone_number"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="none"
-                    android:textIsSelectable="true"
-                    android:focusable="false"
                     android:fontFamily="sans-serif-light"
+                    android:text="@string/_9939009920"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -267,11 +264,11 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="34dp"
-            android:layout_marginRight="34dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
             android:orientation="vertical">
 
             <Button
@@ -279,11 +276,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/gradStart"
-                android:text="Update" />
+                android:text="Update"
+                android:background="@color/gradStart"/>
+
 
 
         </LinearLayout>
+
+
 
 
     </RelativeLayout>
