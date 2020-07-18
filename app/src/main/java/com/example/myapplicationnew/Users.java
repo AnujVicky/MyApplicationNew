@@ -1,12 +1,7 @@
 package com.example.myapplicationnew;
-import android.widget.EditText;
-
-import com.google.firebase.firestore.Exclude;
 import com.google.firebase.firestore.IgnoreExtraProperties;
 import com.google.firebase.firestore.ServerTimestamp;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 
 @IgnoreExtraProperties
@@ -24,20 +19,6 @@ public class Users {
         this.alternate_phone_number = alternate_phone_number;
         this.user_id = user_id;
     }
-
-    public Users(String name, String alternate_number) {
-        this.name = name;
-        this.alternate_phone_number =alternate_number;
-    }
-
-    @Exclude
-    public Map<String, Object> toMap() {
-        HashMap<String, Object> result = new HashMap<>();
-        result.put("name", name);
-        result.put("alternate_phone_number", alternate_phone_number);
-        return result;
-    }
-
 
     public Users() {
     }

@@ -205,10 +205,13 @@
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
-                <TextView
+                <EditText
+                    android:id="@+id/edit_phone_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:clickable="false"
                     android:fontFamily="sans-serif-light"
+                    android:inputType="textWebEditText"
                     android:text="@string/_9939009920"
                     android:textColor="#000000"
                     android:textSize="18sp" />
