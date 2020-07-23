@@ -25,7 +25,11 @@
 
     <string name="openNavDrawer">Navigation Drawer Open</string>
     <string name="closeNavDrawer">Navigation Drawer Close</string>
+<<<<<<< HEAD
     <string name="mahuadanr">Mahuadanr</string>
+=======
+    <string name="mahuadanr">MAHUADANR</string>
+>>>>>>> a1e5541... all image retrive done
     <string name="_9939009920">9939009920</string>
     <string name="phone">Phone</string>
     <string name="alternate_phone">Alternate phone</string>

@@ -13,6 +13,7 @@
         android:background="@drawable/grad"
         android:paddingBottom="30dp">
 
+<<<<<<< HEAD
         <!--        <RelativeLayout-->
         <!--            android:id="@+id/imgUser"-->
         <!--            android:layout_width="wrap_content"-->
@@ -20,6 +21,9 @@
         <!--            android:layout_centerHorizontal="true"-->
         <!--            android:layout_marginTop="20dp"-->
         <!--            android:background="@drawable/circle_border">-->
+=======
+
+>>>>>>> a1e5541... all image retrive done
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="180dp"
@@ -28,6 +32,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="26dp"
             android:src="@drawable/userimg" />
+<<<<<<< HEAD
         <!--            <ImageView-->
         <!--                droid:layout_height="120dp"-->
         <!--                android:layout_margin="9dp"-->
@@ -39,27 +44,47 @@
         <!--                android:src="@drawable/userimg" />-->
 
         <!--        </RelativeLayout>-->
+=======
+
+>>>>>>> a1e5541... all image retrive done
 
 
         <TextView
             android:id="@+id/tv_name"
+<<<<<<< HEAD
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+=======
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+>>>>>>> a1e5541... all image retrive done
             android:layout_below="@+id/profile_image"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+<<<<<<< HEAD
             android:layout_marginStart="114dp"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="13dp"
             android:layout_marginEnd="102dp"
             android:layout_marginRight="102dp"
+=======
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+>>>>>>> a1e5541... all image retrive done
             android:ellipsize="marquee"
             android:fontFamily="sans-serif-light"
             android:paddingLeft="20dp"
             android:singleLine="true"
+<<<<<<< HEAD
             android:text="Anuj Kumar"
+=======
+            android:gravity="center"
+>>>>>>> a1e5541... all image retrive done
             android:textColor="@color/white"
             android:textSize="32sp" />
 
@@ -199,10 +224,17 @@
                     android:textSize="13sp" />
 
                 <TextView
+<<<<<<< HEAD
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:text="Anuj Kumar"
+=======
+                    android:id="@+id/proName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+>>>>>>> a1e5541... all image retrive done
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -228,10 +260,17 @@
                     android:textSize="13sp" />
 
                 <TextView
+<<<<<<< HEAD
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:text="9939009920"
+=======
+                    android:id="@+id/proPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+>>>>>>> a1e5541... all image retrive done
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -252,15 +291,26 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:text="Email"
+=======
+                    android:text="Alternate Phone Number"
+>>>>>>> a1e5541... all image retrive done
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
                 <TextView
+<<<<<<< HEAD
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:text="@string/twitterUsername"
+=======
+                    android:id="@+id/proAlternate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+>>>>>>> a1e5541... all image retrive done
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -281,15 +331,26 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                     android:text="Facebook"
+=======
+                    android:text="Location"
+>>>>>>> a1e5541... all image retrive done
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
                 <TextView
+<<<<<<< HEAD
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:text="facebook.com/joeytrib"
+=======
+                    android:id="@+id/proLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+>>>>>>> a1e5541... all image retrive done
                     android:textColor="#000000"
                     android:textSize="18sp" />
 

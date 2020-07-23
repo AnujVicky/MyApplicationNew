@@ -29,7 +29,6 @@
         app:menu="@menu/nav_menu"
         android:id="@+id/nav_view"
         android:layout_gravity="start"
-
         app:headerLayout="@layout/nav_header_layout"
         />
 

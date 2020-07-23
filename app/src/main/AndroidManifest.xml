@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".UpdateActivity"></activity>
         <activity android:name=".ProfileActivity" />
         <activity android:name=".nav_header_layout" />
+=======
+        <activity android:name=".nav_header_layout"></activity>
+        <activity android:name=".UpdateActivity" />
+        <activity android:name=".ProfileActivity" />
+>>>>>>> a1e5541... all image retrive done
         <activity android:name=".HomeActivity" />
         <activity android:name=".OtpActivity" />
         <activity android:name=".RegisterActivity">
