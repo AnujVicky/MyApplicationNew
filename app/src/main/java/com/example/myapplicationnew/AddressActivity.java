@@ -1,6 +1,7 @@
 package com.example.myapplicationnew;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Address;
@@ -9,6 +10,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -16,9 +18,12 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMarkerDragListener;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -33,6 +38,7 @@ public class AddressActivity extends FragmentActivity implements OnMapReadyCallb
     FusedLocationProviderClient fusedLocationProviderClient;
     Geocoder geocoder;
     private static final int REQUEST_CODE = 101;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +46,8 @@ public class AddressActivity extends FragmentActivity implements OnMapReadyCallb
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLocation();
         geocoder = new Geocoder(this, Locale.getDefault());
+
+
 
     }
 
@@ -57,7 +65,7 @@ public class AddressActivity extends FragmentActivity implements OnMapReadyCallb
             public void onSuccess(Location location) {
                 if (location != null) {
                     currentLocation = location;
-                    Log.d("Loc","msg"+ location);
+                    Log.d("Loc", "msg" + location);
                     Toast.makeText(getApplicationContext(), currentLocation.getLatitude() + "" + currentLocation.getLongitude(), Toast.LENGTH_SHORT).show();
                     SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.myMap);
                     assert supportMapFragment != null;
@@ -65,12 +73,12 @@ public class AddressActivity extends FragmentActivity implements OnMapReadyCallb
                 }
 
                 try {
-                    addresses = geocoder.getFromLocation(currentLocation.getLatitude(),currentLocation.getLongitude(),1);
+                    addresses = geocoder.getFromLocation(currentLocation.getLatitude(), currentLocation.getLongitude(), 1);
                     String address = addresses.get(0).getAddressLine(0);
                     String locality = addresses.get(0).getLocality();
                     String city = addresses.get(0).getAdminArea();
                     String postalCode = addresses.get(0).getPostalCode();
-                    Log.d("Address","Address " + address + " " + locality + " " + city + " " + postalCode);
+                    Log.d("Address", "Address " + address + " " + locality + " " + city + " " + postalCode);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -78,22 +86,27 @@ public class AddressActivity extends FragmentActivity implements OnMapReadyCallb
             }
         });
     }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        googleMap.setMyLocationEnabled(true);
         LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("I am here!");
-//        googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+       googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
         googleMap.addMarker(markerOptions);
+
+
     }
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_CODE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    fetchLocation();
-                }
-                break;
-        }
-    }
+
 }
