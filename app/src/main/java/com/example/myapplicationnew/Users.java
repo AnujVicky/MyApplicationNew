@@ -1,9 +1,4 @@
 package com.example.myapplicationnew;
-<<<<<<< HEAD
-import com.google.firebase.firestore.IgnoreExtraProperties;
-import com.google.firebase.firestore.ServerTimestamp;
-import java.util.Date;
-=======
 import android.widget.EditText;
 
 import com.google.firebase.firestore.Exclude;
@@ -12,7 +7,6 @@ import com.google.firebase.firestore.ServerTimestamp;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
->>>>>>> a1e5541... all image retrive done
 
 
 @IgnoreExtraProperties
@@ -31,8 +25,6 @@ public class Users {
         this.user_id = user_id;
     }
 
-<<<<<<< HEAD
-=======
     public Users(String name, String alternate_number) {
         this.name = name;
         this.alternate_phone_number =alternate_number;
@@ -47,7 +39,6 @@ public class Users {
     }
 
 
->>>>>>> a1e5541... all image retrive done
     public Users() {
     }
 

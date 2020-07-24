@@ -1,18 +1,5 @@
 package com.example.myapplicationnew;
 
-<<<<<<< HEAD
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-
-public class ProfileActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-=======
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -46,7 +33,6 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
->>>>>>> a1e5541... all image retrive done
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         ImageView DirectToEdit;
@@ -58,13 +44,6 @@ public class ProfileActivity extends AppCompatActivity {
                 Intent intent = new Intent(ProfileActivity.this,
                         UpdateActivity.class);
                 startActivity(intent);
-<<<<<<< HEAD
-            }
-        });
-
-
-
-=======
 
             }
         });
@@ -112,13 +91,9 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             }
         });
->>>>>>> a1e5541... all image retrive done
 
     }
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a1e5541... all image retrive done
 }

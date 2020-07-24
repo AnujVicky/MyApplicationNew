@@ -4,13 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-<<<<<<< HEAD
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Bundle;
-import android.provider.MediaStore;
-=======
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,22 +12,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
->>>>>>> a1e5541... all image retrive done
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-<<<<<<< HEAD
-import android.widget.Toast;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import java.io.IOException;
-import de.hdodenhof.circleimageview.CircleImageView;
-import com.example.myapplicationnew.Users;
-=======
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -58,21 +39,10 @@ import java.util.HashMap;
 import java.util.Map;
 import de.hdodenhof.circleimageview.CircleImageView;
 
->>>>>>> a1e5541... all image retrive done
 
 public class UpdateActivity extends AppCompatActivity {
 
 
-<<<<<<< HEAD
-    private CircleImageView ProfileImage;
-    private EditText tName,tPhone_number,tAlternate_number;
-    private Button bUpdate;
-    private static final int PICK_IMAGE = 1;
-    Uri imageUri;
-    @SuppressLint("WrongViewCast")
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-=======
     private static final String TAG = "UpdateActivity";
     private CircleImageView ProfileImage;
     private EditText tName, tPhone_number, tAlternate_number, tNameVal;
@@ -96,7 +66,6 @@ public class UpdateActivity extends AppCompatActivity {
         Log.d("REF", "msg1" + refData);
 
 
->>>>>>> a1e5541... all image retrive done
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
 
@@ -114,16 +83,11 @@ public class UpdateActivity extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(gallery, "Sellect Picture"), PICK_IMAGE);
             }
         });
-<<<<<<< HEAD
-=======
         Users userGet = new Users();
->>>>>>> a1e5541... all image retrive done
         tName = findViewById(R.id.editname);
         tPhone_number = findViewById(R.id.edit_phone_number);
         tAlternate_number = findViewById(R.id.editalternatenumber);
         bUpdate = findViewById(R.id.updatebutton);
-<<<<<<< HEAD
-=======
         title = findViewById(R.id.tv_name);
 
         DocumentReference docRef = FirebaseFirestore.getInstance().collection("user").document(userId);
@@ -160,36 +124,10 @@ public class UpdateActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
->>>>>>> a1e5541... all image retrive done
 
         bUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
-                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                String name = tName.getText().toString();
-                String phone_number = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();
-                String alternate_phone_number = tAlternate_number.getText().toString();
-                boolean v = validate(name,phone_number,alternate_phone_number);
-                if (v == true){
-                    FirebaseFirestore db = FirebaseFirestore.getInstance();
-                    DocumentReference userRef = db.collection("user").document(userId);
-                    Users user = new Users();
-                    user.setName(name);
-                    user.setPhone_number(phone_number);
-                    user.setAlternate_phone_number(alternate_phone_number);
-                    user.setUser_id(userId);
-                    userRef.set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful())
-                            {
-                                Toast.makeText(getApplicationContext(),"Data Saved Successfully",Toast.LENGTH_LONG).show();
-                            }
-                            else
-                            {
-                                Toast.makeText(getApplicationContext(),"Data Saving Failed",Toast.LENGTH_LONG).show();
-=======
                 final String name = tName.getText().toString();
                 final String phone_number = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();
                 final String alternate_phone_number = tAlternate_number.getText().toString();
@@ -241,33 +179,22 @@ public class UpdateActivity extends AppCompatActivity {
                                         }
                                     });
                                 }
->>>>>>> a1e5541... all image retrive done
                             }
                         }
                     });
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a1e5541... all image retrive done
                 }
 
             }
         });
 
 
-<<<<<<< HEAD
-
-    }
-
-=======
     }
 
    public void updateData(){
 
    }
 
->>>>>>> a1e5541... all image retrive done
     private boolean validate(String name, String phone_number, String alternate_phone_number) {
         if(name.equals("")){
             Toast.makeText(getApplicationContext(), "Enter a Name", Toast.LENGTH_SHORT).show();
@@ -296,20 +223,15 @@ public class UpdateActivity extends AppCompatActivity {
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imageUri);
                 ProfileImage.setImageBitmap(bitmap);
-<<<<<<< HEAD
-=======
 
                 uploadImage();
 
 
->>>>>>> a1e5541... all image retrive done
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
-<<<<<<< HEAD
-=======
     private void uploadImage()
     {
         if (imageUri != null) {
@@ -378,5 +300,4 @@ public class UpdateActivity extends AppCompatActivity {
                             });
         }
     }
->>>>>>> a1e5541... all image retrive done
 }
