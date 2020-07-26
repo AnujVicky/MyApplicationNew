@@ -9,6 +9,7 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -79,6 +80,9 @@ public class AddressActivity extends FragmentActivity implements OnMapReadyCallb
                     String city = addresses.get(0).getAdminArea();
                     String postalCode = addresses.get(0).getPostalCode();
                     Log.d("Address", "Address " + address + " " + locality + " " + city + " " + postalCode);
+                    String fullAddressData = address + " " + locality;
+                    EditText textAddress = (EditText)findViewById(R.id.editFullAddress);
+                    textAddress.setText(fullAddressData);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -103,7 +107,7 @@ public class AddressActivity extends FragmentActivity implements OnMapReadyCallb
         LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("I am here!");
        googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18));
         googleMap.addMarker(markerOptions);
 
 

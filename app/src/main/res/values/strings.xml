@@ -30,4 +30,15 @@
     <string name="phone">Phone</string>
     <string name="google_maps_key" translatable="false">AIzaSyAIyTC8IYMhmFNJ68qfnkbVw0K_vsi4qLA</string>
     <string name="alternate_phone">Alternate phone</string>
+    <string name="atta_and_flour">Atta &amp; Flour</string>
+    <string name="dals">Dals &amp; pulses</string>
+    <string name="oils">Cooking Oils</string>
+    <string name="biscuit">Biscuits</string>
+    <string name="noodles">Noodles and Pasta</string>
+    <string name="healthDrink">Health Drinks</string>
+    <string name="teaCoffee">Tea &amp; Coffee</string>
+    <string name="lundary">Laundary Detergent</string>
+
+
+
 </resources>

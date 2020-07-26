@@ -84,6 +84,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(HomeActivity.this, AddressActivity.class);
             startActivity(intent);
         }
+        if (id == R.id.nav_my_order)
+        {
+            Intent intent = new Intent(HomeActivity.this, CategoriesActivity.class);
+            startActivity(intent);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

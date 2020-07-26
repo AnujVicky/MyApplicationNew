@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoriesActivity">
+
+    <TextView
+        android:id="@+id/categories_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/background_dark"
+        android:background="@color/gradEnd"
+        android:padding="10dp" />
+    <RelativeLayout
+        android:id="@+id/firstRow"
+        android:layout_below="@+id/categories_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/CatAtta"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+
+        android:background="@drawable/backgrd">
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text='@string/atta_and_flour'
+      android:textStyle="bold"
+      android:textSize="15dp"
+      android:layout_centerHorizontal="true"></TextView>
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/atta"
+        android:layout_centerHorizontal="true"></ImageView>
+
+
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/CatRice"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/CatAtta"
+        android:layout_below="@+id/categories_title"
+        android:background="@drawable/backgrd">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rice"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"></TextView>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/rice"
+            android:layout_centerHorizontal="true"></ImageView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/CatDal"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/CatRice"
+        android:background="@drawable/backgrd">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dals"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"></TextView>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/dals"
+            android:layout_centerHorizontal="true"></ImageView>
+
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondRow"
+        android:layout_below="@+id/firstRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/catOil"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+
+        android:background="@drawable/backgrd">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@string/oils'
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"></TextView>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/oil"
+            android:layout_centerHorizontal="true"></ImageView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/CatBiscuit"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/catOil"
+        android:background="@drawable/backgrd">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/biscuit"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_centerHorizontal="true"></TextView>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/biscuit"
+            android:layout_centerHorizontal="true"></ImageView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/CatNoodles"
+        android:layout_width="105dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/CatBiscuit"
+        android:background="@drawable/backgrd">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noodles"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_centerHorizontal="true"></TextView>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/noodles"
+            android:layout_centerHorizontal="true"></ImageView>
+
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/thirdRow"
+        android:layout_below="@+id/secondRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/catHeathDrink"
+            android:layout_width="105dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+
+            android:background="@drawable/backgrd">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@string/healthDrink'
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"></TextView>
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/health_drink"
+                android:layout_centerHorizontal="true"></ImageView>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/catTeaCoffee"
+            android:layout_width="105dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/catHeathDrink"
+            android:background="@drawable/backgrd">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teaCoffee"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"></TextView>
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/tea"
+                android:layout_centerHorizontal="true"></ImageView>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/catLaundary"
+            android:layout_width="105dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/catTeaCoffee"
+            android:background="@drawable/backgrd">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lundary"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_centerHorizontal="true"></TextView>
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/laundary"
+                android:layout_centerHorizontal="true"></ImageView>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
